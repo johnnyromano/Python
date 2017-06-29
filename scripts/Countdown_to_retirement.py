@@ -1,5 +1,5 @@
 print("When do you retire...")
-year = int(input("What year where you born? "))
+year = int(input("What year were you born? "))
 years = 2017 - year
 days = years * 365
 
