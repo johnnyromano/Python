@@ -1,10 +1,16 @@
 # Author: Johnny Romano
-# make a list to hold onto items
+# make a list app to hold onto items
 shopping_list = []
 
 # print out instructions on how to use the app
-print("What do we need to get while we're out?")
-print("Enter 'DONE' to stop adding items.")
+def show_help():
+    print("\nWhat do we need to get while we're out?")
+    print("""
+Enter 'DONE' to stop adding items.
+Enter 'HELP' for this help.
+Enter 'SHOW' to see your current list.
+""")
+show_help()
 
 while True:
     # ask for new items
