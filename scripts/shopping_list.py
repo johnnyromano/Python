@@ -21,23 +21,25 @@ def add_to_list(new_item):
     # add new items to the list
     shopping_list.append(new_item)
 
-show_help()
+def main():
+    show_help()
+    while True:
+        # ask for new items
+        new_item = input("> ")
 
-while True:
-    # ask for new items
-    new_item = input("> ")
+        # allow for quiting app
+        if new_item == 'DONE':
+            print("\nList has {} items.".format(len(shopping_list)))
+            break
+        # or ask for help
+        elif new_item == 'HELP':
+            show_help()
+            continue
+        elif new_item == 'SHOW':
+            show_list()
+            continue
+        add_to_list(new_item)
 
-    # allow for quiting app
-    if new_item == 'DONE':
-        print("\nList has {} items.".format(len(shopping_list)))
-        break
-    # or ask for help
-    elif new_item == 'HELP':
-        show_help()
-        continue
-    elif new_item == 'SHOW':
-        show_list()
-        continue
-    add_to_list(new_item)
+    show_list()
 
-show_list()
+main()
