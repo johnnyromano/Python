@@ -19,6 +19,9 @@ while True:
     # allow for quiting app
     if new_item == 'DONE':
          break
+    elif new_item == 'HELP':
+        show_help()
+        continue         
 
     # add new items to the list
     shopping_list.append(new_item)
