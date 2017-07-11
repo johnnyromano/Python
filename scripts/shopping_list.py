@@ -1,3 +1,4 @@
+# Author: Johnny Romano
 # make a list to hold onto items
 shopping_list = []
 
