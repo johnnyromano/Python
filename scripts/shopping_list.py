@@ -1,5 +1,14 @@
-# Author: Johnny Romano
-# make a list app to hold onto items
+#!/usr/bin/env python
+"""
+    File name: shopping_list.py
+    Description: Make a list app to hold onto items
+    Author: Johnny Romano
+    Email: John.p.romano@gmail.com
+    Date created: 11-July-2017
+    Date last modified: 18-July-2017
+    Python Version: 3.5
+"""
+
 shopping_list = []
 
 # print out instructions on how to use the app
