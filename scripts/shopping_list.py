@@ -5,7 +5,7 @@
     Author: Johnny Romano
     Email: John.p.romano@gmail.com
     Date created: 11-July-2017
-    Date last modified: 19-July-2017
+    Date last modified: 25-July-2017
     Python Version: 3.5
 """
 import os
@@ -51,10 +51,8 @@ def show_list():
     # print out the list
     print("\nHere's your list:")
 
-    index = 1
-    for item in shopping_list:
+    for index, item in enumerate(shopping_list, start=1):
         print("{}. {}".format(index,item))
-        index += 1
 
     print("-"*10)
 
