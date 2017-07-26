@@ -13,7 +13,7 @@ import random
 import sys
 
 # make a list of words
-words = [
+WORDS = [
     'apple',
     'banana',
     'orange',
@@ -33,32 +33,32 @@ def clear():
     else:
         os.system('clear')
 
-def draw(bad_guesses, good_guesses, secret_word):
+def draw(misses, correct, word):
     clear()
 
-    print('Strikes: {}/7'.format(len(bad_guesses)))
+    print('Strikes: {}/7'.format(len(misses)))
     print('')
 
-    for letter in bad_guesses:
+    for letter in misses:
         print(letter, end=' ')
     print('\n\n')
 
-    for letter in secret_word:
-        if letter in good_guesses:
+    for letter in word:
+        if letter in correct:
             print(letter, end='')
         else:
             print('_', end='')
 
     print('')
 
-def get_guess(bad_guesses, good_guesses):
+def get_guess(guesses):
     while True:
         # take guess
         guess = input("Guess a letter: ").lower()
 
         if len(guess) != 1:
             print("You can only guess a single letter!")
-        elif guess in bad_guesses or guess is good_guesses:
+        elif guess in guesses:
             print("You've already guess that letter!")
         elif not guess.isalpha():
             print("You can only guess letters!")
@@ -68,30 +68,27 @@ def get_guess(bad_guesses, good_guesses):
 def play(done):
     clear()
     # pick a random word
-    secret_word = random.choice(words)
-    bad_guesses = set()
-    good_guesses = set()
+    word = random.choice(WORDS)
+    misses = set()
+    correct = set()
+    word_set = set(word)
 
     while True:
-        draw(bad_guesses, good_guesses, secret_word)
-        guess = get_guess(bad_guesses, good_guesses)
+        draw(misses, correct, word)
+        guess = get_guess(misses | correct)
 
-        if guess in secret_word:
-            good_guesses.append(guess)
-            found = True
-            for letter in secret_word:
-                if letter not in good_guesses:
-                    found = False
-            if found:
+        if guess in word_set:
+            correct.add(guess)
+            if not word_set.symmetric_difference(correct):
                 print("You Win!")
-                print("The secret word was {}".format(secret_word))
+                print("The secret word was {}".format(word))
                 done = True
         else:
-            bad_guesses.append(guess)
-            if len(bad_guesses) == 7:
-                draw(bad_guesses, good_guesses, secret_word)
+            misses.add(guess)
+            if len(misses) == 7:
+                draw(misses, correct, word)
                 print("You lost!")
-                print("The secret word was {}".format(secret_word))
+                print("The secret word was {}".format(word))
                 done = True
 
         if done:
