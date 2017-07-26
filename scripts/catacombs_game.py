@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-    File name: castle_game.py
+    File name: catacombs_game.py
     Description: Navigate the treacherous hidden catacombs.
     Author: Johnny Romano
     Email: John.p.romano@gmail.com
