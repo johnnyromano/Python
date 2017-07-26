@@ -5,7 +5,7 @@
     Author: Johnny Romano
     Email: John.p.romano@gmail.com
     Date created: 13-July-2017
-    Date last modified: 16-July-2017
+    Date last modified: 25-July-2017
     Python Version: 3.5
 """
 import os
@@ -35,7 +35,7 @@ def clear():
 
 def draw(bad_guesses, good_guesses, secret_word):
     clear()
-    
+
     print('Strikes: {}/7'.format(len(bad_guesses)))
     print('')
 
@@ -69,8 +69,8 @@ def play(done):
     clear()
     # pick a random word
     secret_word = random.choice(words)
-    bad_guesses = []
-    good_guesses = []
+    bad_guesses = set()
+    good_guesses = set()
 
     while True:
         draw(bad_guesses, good_guesses, secret_word)
