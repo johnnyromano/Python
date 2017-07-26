@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-    File name: catacombs_game.py
-    Description: Navigate the treacherous hidden catacombs.
+    File name: catacombs.py
+    Description: Navigate the treacherous catacombs.
     Author: Johnny Romano
     Email: John.p.romano@gmail.com
     Date created: 26-July-2017
