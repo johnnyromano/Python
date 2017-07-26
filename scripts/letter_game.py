@@ -47,7 +47,7 @@ def draw(misses, correct, word):
         if letter in correct:
             print(letter, end='')
         else:
-            print('_', end='')
+            print('_ ', end='')
 
     print('')
 
