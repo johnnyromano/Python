@@ -71,7 +71,7 @@ def view_entries():
         print('d) delete entry')
         print('q) return to main menu')
 
-        next_action = input('Action: [Ndq] ').lower()strip()
+        next_action = input('Action: [Ndq] ').lower().strip()
         if next_action == 'q'
             break
         elif next_action == 'd'
