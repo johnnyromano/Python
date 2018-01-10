@@ -1,0 +1,11 @@
+Romano, Johnny	john.p.romano@gmail.com	(708) 983-5555	Product Manager, GardenBots	@johnnyromano
+Waclawek, Arlene	a.waclawek@gmail.com	(555) 555-5554	VP of Brand, Aspriation @awclawek
+Arthur, King	king_arthur@camelot.co.uk		King, Camelot
+Österberg, Sven-Erik	governor@norrbotten.co.se		Governor, Norrbotten	@sverik
+, Tim	tim@killerrabbit.com		Enchanter, Killer Rabbit Cave
+Musk, Elon	elon@spacex.com	(555) 555-5543	CEO, SpaceX	@elonmusk
+Doctor, The	doctor+companion@tardis.co.uk		Time Lord, Gallifrey
+Exampleson, Example	me@example.com	555-555-5552	Example, Example Co.	@example
+Obama, Barack	president.44@us.gov	555 555-5551	President, United States of America	@potus44
+Vader, Darth	darth-vader@empire.gov	(555) 555-4444	Sith Lord, Galactic Empire	@darthvader
+Fernández de la Vega Sanz, María Teresa	mtfvs@spain.gov		First Deputy Prime Minister, Spanish Govt.
